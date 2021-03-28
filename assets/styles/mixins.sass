@@ -1,0 +1,127 @@
+@mixin drawCirclesAnimated()
+  &:before
+    content: ''
+    position: absolute
+    background-image: url("/images_static/bluring.svg")
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    width: 500px
+    height: 500px
+    top: -250px
+    right: -250px
+    z-index: 1
+    animation-name: spin
+    animation-duration: 15000ms
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    @media (max-width: 761px)
+      display: none
+  &:after
+    content: ''
+    position: absolute
+    background-image: url("/images_static/redring.svg")
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    width: 500px
+    height: 500px
+    bottom: -250px
+    left: -250px
+    z-index: 1
+    animation-name: spin
+    animation-duration: 15000ms
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    @media (max-width: 761px)
+      display: none
+@mixin drawCirclesAnimatedReversed()
+  &:before
+    content: ''
+    position: absolute
+    background-image: url("/images_static/bluring.svg")
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    width: 500px
+    height: 500px
+    bottom: -250px
+    right: -250px
+    z-index: 1
+    animation-name: spin
+    animation-duration: 15000ms
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    @media (max-width: 1600px)
+      display: none
+  &:after
+    content: ''
+    position: absolute
+    background-image: url("/images_static/redring.svg")
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    width: 500px
+    height: 500px
+    top: -250px
+    left: -250px
+    z-index: 1
+    animation-name: spin
+    animation-duration: 15000ms
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    @media (max-width: 1600px)
+      display: none
+@mixin ltrButton()
+  .ltr-btn
+    background: #0039A6
+    color: #fff
+    border-radius: 126px
+    border: 0px
+    height: 62px
+    font-family: Muller
+    font-size: 1.25rem
+    font-weight: 500
+    text-transform: none
+    padding: 15px 50px
+    vertical-align: middle
+    box-sizing: border-box
+    @media (max-width: 576px)
+      width: 220px
+      font-size: 1.1rem
+      padding-right: 25px
+      padding-left: 25px
+  .ltr-btn:hover
+    background: #fff !important
+    color: #0039A6 !important
+    border: 2px solid #0039A6
+  .ltr-btn-reversed
+    color: #0039A6 !important
+    background: #fff !important
+    border: 0
+@mixin ltrHeaders()
+  h2
+    line-height: 4.375rem
+    font-family: Muller
+    font-size: 3.75rem
+    font-weight: 700
+    color: #fff
+    margin-bottom: 23px
+    @media (max-width: 1600px)
+      font-size: 3.125rem
+      line-height: 3.646rem
+    @media (max-width: 1200px)    
+      font-size: 2.344rem
+      line-height: 2.734rem
+    @media (max-width: 992px)    
+      h2
+        font-size: 1.938rem
+        line-height: 2.260rem
+  h3
+    font-size: 1.5rem
+    color: #fff
+    font-weight: 400
+    margin-bottom: 40px
+  .black
+    color: #000
+    
